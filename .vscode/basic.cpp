@@ -248,6 +248,21 @@ int main()
     cout << "Square root of numberSqrt: " << sqrt(numberSqrt) << endl;  // uses header <cmath>
 
 
+    // passing array as parameter to function in cpp
+    /*
+    
+    void printArray(int arr[], int size) {
+        cout << "Array elements passed to function: ";
+        for (int i = 0; i < size; ++i) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+    
+    int myArray[] = {1, 2, 3, 4, 5};
+    int arraySize = sizeof(myArray) / sizeof(myArray[0]);                 ******** to calculate size of array ********
+    printArray(myArray, arraySize); // calling function to print array
+    */
 
     return 0;
 }
