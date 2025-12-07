@@ -189,6 +189,65 @@ int main()
     } while (i <= 5);
     cout << endl;
 
+    // functions in cpp
+
+    // type of functions in cpp
+    // void function
+    // return function
+    // parameterized function
+    // non-parameterized function
+
+    // **************function must be outside the main function
+
+    /*
+    void greet() {
+        cout << "Hello from greet function!" << endl;
+    }
+
+    greet(); // calling void function
+    */
+
+    // ********** pass by value function *****************
+
+    /*
+    int add(int x, int y) {
+        return x + y;
+    }
+    int sum = add(5, 10); // calling function
+    cout << "Sum using function: " << sum << endl;
+    */
+
+    // ********** pass by reference function *****************
+    /*
+    void swap(int &a, int &b) {          // passing by reference using & rest wiill be same
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+    int num1 = 5, num2 = 10;
+    swap(num1, num2); // calling function
+    cout << "After swapping: num1 = " << num1 << ", num2 = " << num2 << endl;
+    */
+
+
+    // maximum and minimum in cpp
+    int p = 15, q = 25;
+    cout << "Maximum of p and q: " << max(p, q) << endl;
+    cout << "Minimum of p and q: " << min(p, q) << endl;    // uses header <algorithm>
+
+    // absolute value in cpp
+    int negativeNum = -50;
+    cout << "Absolute value of negativeNum: " << abs(negativeNum) << endl;  // uses header <cstdlib> or <cmath>
+
+    // power function in cpp
+    double base = 2.0, exponent = 3.0;
+    cout << "Power: " << pow(base, exponent) << endl;  // uses header <cmath>
+
+    // square root function in cpp
+    double numberSqrt = 16.0;
+    cout << "Square root of numberSqrt: " << sqrt(numberSqrt) << endl;  // uses header <cmath>
+
+
 
     return 0;
 }
