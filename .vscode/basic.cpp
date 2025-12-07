@@ -161,7 +161,34 @@ int main()
     name[0] = 'd'; // changing first character to lowercase 'd' 
     cout << "Modified name: " << name << endl;
 
-    
+
+    // loops in cpp
+
+    // this is for loop
+    cout << "Looping through numbers 1 to 5 using for loop:" << endl;
+    for (int i = 1; i <= 5; ++i) {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    // this is while loop
+    cout << "Looping through numbers 1 to 5 using while loop:" << endl;
+    int i = 1;
+    while (i <= 5) {
+        cout << i << " ";
+        ++i;
+    }
+    cout << endl;
+
+    // this is do-while loop
+    cout << "Looping through numbers 1 to 5 using do-while loop:" << endl;
+    i = 1;
+    do {
+        cout << i << " ";
+        ++i;
+    } while (i <= 5);
+    cout << endl;
+
 
     return 0;
 }
