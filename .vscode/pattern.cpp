@@ -376,7 +376,7 @@ for(int i = 1; i <=5; i++) {
 7 8 9 10 
 11 12 13 14 15
     */
-
+    /*
     int n = 5;
     int count = 1;
     for(int i = 1; i <= n ; i++){
@@ -386,5 +386,82 @@ for(int i = 1; i <=5; i++) {
         }
         cout << endl;
     }
+    */
+
+    // pattern 16:
+    /*
+A 
+A B 
+A B C 
+A B C D 
+A B C D E 
+    */
+
+    /*
+    for(int i = 1; i <= 5; i++) {  // or i = 0; i < 5; i++
+        for(char ch = 'A'; ch <= 'A' + i-1; ch++) {   // remove -1 if i=0
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    */
+
+    // pattern 17:
+    /*
+E 
+E D 
+E D C 
+E D C B 
+E D C B A 
+    */
+
+    /* 
+    for(int i = 1; i <=5; i++) {
+        for(char ch = 'E'; ch >= 'E' - i + 1; ch--) {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    */
+
+    // pattern 18:
+
+    /*
+A B C D E 
+A B C D 
+A B C 
+A B 
+A
+    */
+
+    /*
+    for(int i = 1; i <=5; i++) {                     // if you want to do from E to A then for(int i = 0; i < 5; i++)
+        for(char ch = 'A'; ch <= 'A' + 5 - i; ch++) {        // for(char ch = 'E'; ch >= 'A' + i; ch--) if you want to do from E to A
+            cout << ch << " ";
+        }
+        cout << endl;
+    }*/
+
+    // pattern 19; 
+    /*
+A 
+B B 
+C C C 
+D D D D 
+E E E E E 
+*/
+
+    /*
+    for(int i = 1; i <=5; i++) {
+        for(int j = 1; j <= i; j++) {
+            char ch = 'A' + i - 1;
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    */
+
+    
+
     return 0;
 }
