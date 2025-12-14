@@ -585,7 +585,7 @@ for(int i = 1; i <= n; i++){
         cout << "* ";
     }
     // spaces
-    for(int k = 1; k <= 2*(i - 1); k++){
+    for(int k = 1; k <= 2*(i - 1); k++){       // or you can use  space +=2
         cout << "  ";
     }
     // second part
@@ -609,6 +609,31 @@ for(int i = n; i >= 1; i--){
     }
     cout << endl;
 }
+*/
+
+// pattern 25:
+ /*
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+ */
+
+ /*
+int n = 5;
+    for(int i = 1; i <=2*n-1;i++) {
+        int stars = i;
+        if(i>n) stars = 2*n - i;
+        for(int j = 1; j <=stars;j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
 */
 
 
