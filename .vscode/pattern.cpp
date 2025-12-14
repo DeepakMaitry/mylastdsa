@@ -518,5 +518,49 @@ abcdedcba
     }
 */
 
-    return 0;
+    // pattern 22:
+    /*
+    
+E
+ED
+EDC
+EDCB
+EDCBA
+*/
+
+/*
+int n = 5;
+for(int i = 1; i <= n;i++){
+    char ch = 'E';
+    for(int j = 1; j<=i;j++){
+        cout << ch;
+        ch--;
+    }
+    cout <<endl;
+}
+*/
+
+// pattern 23:
+/*
+E
+DE
+CDE
+BCDE
+ABCDE
+*/
+
+/*
+int n = 5;
+for(int i = 0; i < n; i++){
+    char ch = 'E' - i;
+    for(int j = 0; j <= i; j++){
+        cout << ch;
+        ch++;
+    }   
+    cout << endl;
+}
+*/
+
+
+return 0;
 }
