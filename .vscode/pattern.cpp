@@ -647,7 +647,7 @@ int n = 5;
 **      **
 *        *
 */
-// /*
+/*
 int n = 5;
 int spaces = 2*n -2;
 for(int i =1; i<=2*n-1;i++){
@@ -673,6 +673,180 @@ for(int i =1; i<=2*n-1;i++){
 
 }
 
-// */
+*/
+
+// pattern 26:
+/*
+printing square pattern with empty center 
+* * * * * 
+*       * 
+*       * 
+*       * 
+* * * * * 
+whenever row==1 or row==n or col==1 or col==n print *
+else print space
+*/
+/*
+int n = 5;
+for(int i = 1; i <= n; i++){
+    for(int j = 1; j <= n; j++){
+        if(i == 1 || i == n || j == 1 || j == n){
+            cout << "* ";
+        }
+        else{
+            cout << "  ";
+        }
+    }
+    cout << endl;
+}
+*/
+
+// pattern 27:
+/*
+printing hollow right angled triangle
+*
+* *
+*   *
+*     *
+* * * * *
+*/
+
+/*
+int n = 5;
+for(int i = 1; i <= n; i++){
+    for(int j = 1; j <= i; j++){
+        if(j == 1 || j == i || i == n){
+            cout << "* ";
+        }
+        else{
+            cout << "  ";
+        }
+    }
+    cout << endl;
+}
+
+*/
+
+// pattern 28:
+/*
+printing hollow pyramid
+    *
+   * *
+  *   *
+ *     * 
+* * * * *
+
+*/
+
+/*
+int n = 5;
+for(int i = 1; i <= n; i++){
+    // print spaces
+    for(int j = i; j < n; j++){
+        cout << " ";
+    }
+    // print stars
+    for(int k = 1; k <= 2*i -1; k++){
+        if(k == 1 || k == 2*i -1 || i == n){
+            cout << "*";
+        }
+        else{
+            cout << " ";
+        }
+    }
+    cout << endl;
+}
+*/
+
+// pattern 29:
+/*
+printing hollow parallelogram pattern
+
+    * * * * * *
+   *         *
+  *         *
+ * * * * * * 
+ 
+*/
+
+/*
+int n = 4;
+int m = 6;
+
+for(int i = 1; i <= n; i++){
+    // print spaces
+    for(int j = i; j < n; j++){
+        cout << " ";
+    }
+    // print stars
+    for(int k = 1; k <= m; k++){
+        if(i == 1 || i == n || k == 1 || k == m){
+            cout << "* ";
+        }
+        else{
+            cout << "  ";
+        }
+    }
+    cout << endl;
+}
+*/
+
+// pattern 30:
+/*
+concept n - value 
+4 4 4 4 4 4 4
+4 3 3 3 3 3 4
+4 3 2 2 2 3 4
+4 3 2 1 2 3 4
+4 3 2 2 2 3 4
+4 3 3 3 3 3 4
+4 4 4 4 4 4 4
+
+*/
+
+/*
+int n = 4;
+int size = 2*n -1;
+for(int i = 0; i < size; i++){
+    for(int j = 0; j < size; j++){
+        int top = i;
+        int left = j;
+        int right = size - 1 - j;
+        int bottom = size - 1 - i;
+        int val = min(min(top, bottom), min(left, right));
+        cout << n - val << " ";
+    }
+    cout << endl;
+}
+*/
+ 
+// without using min function
+
+/*
+int n = 4;
+int size = 2*n -1;
+for(int i = 0; i < size; i++){
+    for(int j = 0; j < size; j++){
+        int top = i;
+        int left = j;
+        int right = size - 1 - j;
+        int bottom = size - 1 - i;
+        int val = top;
+        if(left < val){
+            val = left;
+        }
+        if(right < val){
+            val = right;
+        }
+        if(bottom < val){
+            val = bottom;
+        }
+        cout << n - val << " ";
+    }
+    cout << endl;
+}
+*/
+
+
 return 0;
 }
