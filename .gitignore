@@ -1,0 +1,36 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+
+# Visual Studio Code (local settings)
+.vscode/
+
+# Build artifacts
+bin/
+build/
+out/
+*.exe
+*.o
+*.obj
+*.dll
+*.pdb
+*.ilk
+
+# C/C++ temporary
+*.exe
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+
+# Ignore data / large files not part of source
+src/customers.txt
+
+# Misc
+*.class
