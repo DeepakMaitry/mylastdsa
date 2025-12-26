@@ -223,7 +223,8 @@ for(auto it = s.begin(); it != s.end(); it++) {
 /*
 // comparator function define karte hai
 bool comparePersons(const Person &a, const Person &b) {
-    return a.age < b.age; // sort by age
+    return a.age < b.age; // sort by age 
+    // agar true hua to asending order me false hota to descending order me p1 < p2 check karta hai 
 }
 // ab set ko define karte hai comparator function ke sath
 set <Person, decltype(&comparePersons)> s(comparePersons);
@@ -242,5 +243,86 @@ Alice 25
 
 */
 
+// multiset in stl 
+// multiset is same as set but it allows duplicate elements
+// sorted order me store karta hai elements ko
+// red-black or AVL tree use karta hai internally
+
+/*
+multiset <int> ms;
+ms.insert(5);
+ms.insert(2);
+ms.insert(8);
+ms.insert(5); // duplicate element allowed
+for(auto it = ms.begin(); it != ms.end(); it++) {
+    cout << *it << " "; // 2 5 5 8
+    }
+    // what will happen if we use ms.erase(5)?
+    // it will remove all occurrences of 5 from the multiset
+    ms.erase(5);
+    cout << "\nAfter erasing 5:\n";
+    for(auto it = ms.begin(); it != ms.end(); it++) {
+        cout << *it << " "; // 2 8
+    }
+    
+*/
+
+// ************ unorderd set ************
+// unordered set is implemented using hash table
+// it store elements in random order
+// it store only unique elements
+// average time complexity for search, insert, delete is O(1)
+// worst case time complexity is O(n)
+
+// structure
+// unordered_set <datatype> name_of_unordered_set;
+// basic operations
+// insert
+// erase
+// find
+// size
+// empty
+// traversal
+
+/*
+unordered_set <int > us;
+us.insert(10);
+us.insert(20); 
+us.insert(10); // duplicate element will not be added
+
+for(auto it = us.begin(); it != us.end(); it++) {
+    cout << *it << " "; // output order may vary
+}  
+*/
+
+// agar duplicate element ko count karna hai to kya karenge?
+// unordered_multiset use karenge
+
+
+    unordered_multiset <int> ums;
+    ums.insert(10);
+    ums.insert(20);
+    ums.insert(10); // duplicate element allowed
+
+    for(auto it = ums.begin(); it != ums.end(); it++) {
+        cout << *it << " "; // output order may vary, may print 10 two times
+    }
+    // agar hame count karna hai kisi element ka to kya karenge?
+    cout << "\nCount of 10: " << ums.count(10) << endl; // 2
+
+    // delete one occurrence of 10
+    ums.erase(ums.find(10)); // removes one occurrence of 10
+    cout << "Count of 10 after erasing one occurrence: " << ums.count(10) << endl; // 1
+
+
+    // set , multiset, unordered set, unordered multiset are completed
+    // set: unique element, sorted order, O(log n) operations
+    // multiset: duplicate element, sorted order , O(log n) operations
+    // unordered set: unique element, random order, O(1) average time operations
+    // unordered multiset: duplicate element, random order, O(1) average time operations
+
+    // generally use ofenly use set and unordered set 
+
+    
     return 0;
 }
